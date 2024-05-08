@@ -1,10 +1,7 @@
-import React from "react";
 import { createApp } from "vue";
-import ReactDOM from "react-dom";
-import ReactApp from "./App";
-import VueApp from "./App.vue";
+import App from "./App.vue";
+import router from "./router";
 
-ReactDOM.render(<ReactApp />, document.getElementById("react-app"));
-
-const app = createApp(VueApp);
-app.mount("#vue-app");
+const app = createApp(App);
+app.use(router);
+app.mount("#app");
